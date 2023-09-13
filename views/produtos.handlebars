@@ -1,0 +1,15 @@
+<h1>Produtos cadastrados</h1>
+<div class="books-container">
+    <a href="/">Adicionar produtos</a>
+    {{#each produtos}}
+    <li>
+        {{this.nome}} - {{this.descricao}} | {{this.preco}} reais
+        <form action="/excluir/{{this.id}}" method="POST">
+           <a href="/excluir/{{this.id}}"><button type="submit">Excluir</button></a>
+        </form>
+        <form action="/editar/{{this.id}}" method="GET">
+            <button type="submit">Editar</button>
+        </form>
+    </li>
+    {{/each}}
+</div>

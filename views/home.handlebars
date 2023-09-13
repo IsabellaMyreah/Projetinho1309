@@ -1,0 +1,12 @@
+<h1>Lista de produtos: </h1>
+
+{{#each tb_produtos}}
+    <h1>{{nome}}</h1>
+    <p>{{preco}}</p>
+    <em>{{descricao}}</em>
+    <a href="/deletar/{{id}}"><button type="submit">Deletar</button></a>
+    <a href="/editar/{{id}}"><button type="submit">Editar</button></a>
+    <hr>
+{{/each}}
+
+
